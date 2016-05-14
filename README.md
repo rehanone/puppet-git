@@ -1,5 +1,7 @@
 # rehan-git
 
+[![Build Status](https://travis-ci.org/rehanone/puppet-git.svg?branch=master)](https://travis-ci.org/rehanone/puppet-git)
+
 #### Table of Contents
 1. [Overview](#overview)
 2. [Module Description](#module-description)
