@@ -17,9 +17,6 @@ Checklist (and a short version for the impatient)
       description (50 characters is the soft limit, excluding ticket
       number(s)), and should skip the full stop.
 
-    - Associate the issue in the message. The first line should include
-      the issue number in the form "(#XXXX) Rest of message".
-
     - The body should provide a meaningful commit message, which:
 
       - uses the imperative, present tense: "change", not "changed" or
@@ -43,18 +40,13 @@ Checklist (and a short version for the impatient)
 
       - Make sure you have a [GitHub account](https://github.com/join)
 
-      - [Create a ticket](https://tickets.puppetlabs.com/secure/CreateIssue!default.jspa), or [watch the ticket](https://tickets.puppetlabs.com/browse/) you are patching for.
-
     * Preferred method:
 
       - Fork the repository on GitHub.
 
-      - Push your changes to a topic branch in your fork of the
-        repository. (the format ticket/1234-short_description_of_change is
-        usually preferred for this project).
+      - Push your changes to a topic branch in your fork of the repository.
 
-      - Submit a pull request to the repository in the puppetlabs
-        organization.
+      - Submit a pull request to the repository in the eikranex organization.
 
 The long version
 ================
@@ -115,7 +107,7 @@ The long version
   3.  Update the related GitHub issue.
 
       If there is a GitHub issue associated with the change you
-      submitted, then you should update the ticket to include the
+      submitted, then you should update it to include the
       location of your branch, along with any other commentary you
       may wish to make.
 
