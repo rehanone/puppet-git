@@ -3,6 +3,7 @@
 class git (
   $sources_manage = $git::params::sources_manage,
   $sources_repo   = $git::params::sources_repo,
+  $sources_ensure = $git::params::sources_ensure,
   $package_ensure = $git::params::package_ensure,
   $package_name   = $git::params::package_name,
   $users          = hiera_hash('git::users', {}),

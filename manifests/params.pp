@@ -2,7 +2,11 @@
 #
 class git::params {
   $sources_manage  = false
-  $sources_repo    = 'ppa:git-core/ppa'
-  $package_ensure  = 'latest'
+  $sources_repo    = $::facts['osfamily'] ? {
+    'Ubuntu' => 'ppa:git-core/ppa',
+    default  => '',
+  }
+  $sources_ensure  = present
+  $package_ensure  = latest
   $package_name    = 'git'
 }
