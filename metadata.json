@@ -1,0 +1,15 @@
+{
+  "name": "puppet-git",
+  "version": "0.1.0",
+  "author": "Rehan Mahmood",
+  "summary": "Install, manage and configure latest version of git",
+  "license": "Apache-2.0",
+  "source": "https://github.com/eikranex/puppet-git.git",
+  "project_page": "https://github.com/eikranex/puppet-git",
+  "issues_url": "https://github.com/eikranex/puppet-git/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
