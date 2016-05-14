@@ -87,7 +87,7 @@ git::sources_repo: 'ppa:git-core/ppa'
 git::sources_ensure: present
 git::package_ensure: latest
 git::package_name: 'git'
-git::user:
+git::users:
   alice:
     user_email: 'alice@xyz.com'
     user_name: 'Alice Alic'
