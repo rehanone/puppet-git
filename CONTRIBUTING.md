@@ -46,7 +46,7 @@ Checklist (and a short version for the impatient)
 
       - Push your changes to a topic branch in your fork of the repository.
 
-      - Submit a pull request to the repository in the eikranex organization.
+      - Submit a pull request to the repository on github.
 
 The long version
 ================
