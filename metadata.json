@@ -1,15 +1,62 @@
 {
-  "name": "puppet-git",
+  "name": "rehanone-git",
   "version": "0.1.0",
   "author": "Rehan Mahmood",
   "summary": "Install, manage and configure latest version of git",
   "license": "Apache-2.0",
-  "source": "https://github.com/eikranex/puppet-git.git",
-  "project_page": "https://github.com/eikranex/puppet-git",
-  "issues_url": "https://github.com/eikranex/puppet-git/issues",
+  "source": "https://github.com/rehanone/puppet-git.git",
+  "project_page": "https://github.com/rehanone/puppet-git",
+  "issues_url": "https://github.com/rehanone/puppet-git/issues",
+  "tags": [
+    "git",
+    "scm",
+    "version control"
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5.0",
+        "6.0"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS"
+    },
+    {
+      "operatingsystem": "Scientific"
+    },
+    {
+      "operatingsystem": "Debian"
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04",
+        "15.10",
+        "16.04"
+      ]
+    },
+    {
+      "operatingsystem": "ArchLinux"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.0.x < 5.0.0"
+    }
+  ],
   "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 3.2.0 < 5.0.0"
+    },
+    {
+      "name": "puppetlabs-apt",
+      "version_requirement": ">= 2.2.0 < 3.0.0"
+    }
   ],
   "data_provider": null
 }
-
