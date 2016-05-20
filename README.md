@@ -21,7 +21,7 @@ A puppet module for managing the installation and configuration of git so that i
 specific git settings.
 
 Where possible, this module can be used to ensure the git installation is up to date with latest upstream release of git.
-Currently, this feature is supported o the following OSes:
+Currently, this feature is supported for the following OSes:
 
   - Ubuntu (using [ppa:git-core/ppa](https://launchpad.net/~git-core/+archive/ubuntu/ppa "ppa:git-core/ppa") )
 
@@ -31,7 +31,7 @@ Currently, this feature is supported o the following OSes:
 * Initialising user accounts with git configurations.
 
 #### Features not yet updated
-* Configure global and local git configurations
+* Configure system wide git configurations
 
 ## Setup
 In order to install `rehan-git`, run the following command:
@@ -58,13 +58,13 @@ include git
 
 Otherwise using the parametrs:  
 ```puppet
-class{git:
-  sources_manage  = true
-  sources_repo    = 'ppa:git-core/ppa'
-  sources_ensure  = present
-  package_ensure  = latest
-  package_name    = 'git'
-}
+  class{ 'git':
+    sources_manage  => true,
+    sources_repo    => 'ppa:git-core/ppa',
+    sources_ensure  => present,
+    package_ensure  => latest,
+    package_name    => 'git',
+  }
 ```
 
 ##### Parameters
@@ -114,8 +114,11 @@ git::user{'alice':
 
 ##### Parameters
 
-* *user_name* sets the user's name to the specified string, and not the default of `${name} on ${fqdn}`, where fqdn is the fully qualified domain name as discovered by facter.
-* *user_email* sets the user's email address to the specified string, and not the default of `${name}@${fqdn}`, where fqdn is the fully qualified domain name as discovered by facter.
+* *ensure* could be set to `present` or `absent`, the default is `present`.
+* *user_name* sets the user's name to the specified string.
+* *user_email* sets the user's email address to the specified string.
+* *color_ui* controls the ui color option for git, the possible values are `true` and `false`, the default is `true`.
+* *push_default* sets the default push behaviour for git, the possible values are `simple` and `matching`, the default is `simple`.
 
 ## Dependencies
 

@@ -1,12 +1,12 @@
 define git::user (
-  $ensure       = file,
+  $ensure       = present,
   $user_email   = 'you@yourdomain.com',
   $user_name    = 'Name',
   $color_ui     = true,
   $push_default = 'simple'
 ) {
 
-  validate_re($ensure, [ '^file', '^absent' ], 'Must be file or absent')
+  validate_re($ensure, [ '^present', '^absent' ], 'Must be present or absent')
   validate_email_address($user_email)
   validate_string($user_name)
   validate_bool($color_ui)
@@ -17,8 +17,13 @@ define git::user (
     default => "/home/${name}"
   }
 
-  file { "/home/${name}/.gitconfig":
-    ensure  => $ensure,
+  $file_ensure = $ensure ? {
+    'present' => file,
+    default   => $ensure,
+  }
+
+  file { "${home}/.gitconfig":
+    ensure  => $file_ensure,
     path    => "${home}/.gitconfig",
     owner   => $name,
     group   => $name,
