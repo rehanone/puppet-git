@@ -9,7 +9,7 @@ describe 'git' do
 
   context 'with default values for all parameters' do
     it { should contain_class('git::sources') }
-    it { should contain_class('git::install').that_requires('Git::Sources') }
-    it { should contain_class('git::config').that_requires('Git::Install') }
+    it { should contain_class('git::install').that_requires('git::sources') }
+    it { should contain_class('git::config').that_requires('git::install') }
   end
 end
