@@ -2,7 +2,7 @@
 #
 class git::params {
   $sources_manage  = false
-  $sources_repo    = $::facts['osfamily'] ? {
+  $sources_repo    = $::facts[os][name] ? {
     'Ubuntu' => 'ppa:git-core/ppa',
     default  => '',
   }

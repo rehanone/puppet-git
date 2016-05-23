@@ -56,7 +56,7 @@ A basic install with the defaults would be:
 include git
 ```
 
-Otherwise using the parametrs:  
+Otherwise using the parameters:  
 ```puppet
   class{ 'git':
     sources_manage  => true,

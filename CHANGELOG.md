@@ -1,3 +1,9 @@
+## 0.1.3 (May 23, 2016)
+
+Bugfixes:
+
+  - Fix the facts hash usage to allow ppa repo on Ubuntu systems.
+
 ## 0.1.2 (May 19, 2016)
 
 Features:

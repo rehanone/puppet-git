@@ -6,14 +6,13 @@ class git::sources {
 
   if $git::sources_manage {
 
-    case $::facts['osfamily'] {
+    case $::facts[os][name] {
       'Ubuntu': {
         contain apt
         apt::ppa { $git::sources_repo:
           ensure => $git::sources_ensure,
         }
       }
-      'RedHat': { }
       default: { }
     }
   }
