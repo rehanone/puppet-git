@@ -8,7 +8,7 @@ class git::sources {
 
     case $::facts[os][name] {
       'Ubuntu': {
-        contain apt
+        require apt
         apt::ppa { $git::sources_repo:
           ensure => $git::sources_ensure,
         }

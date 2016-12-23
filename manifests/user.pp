@@ -1,30 +1,25 @@
 define git::user (
-  $ensure       = present,
-  $user_email   = 'you@yourdomain.com',
-  $user_name    = 'Name',
-  $color_ui     = true,
-  $push_default = 'simple'
-) {
-
-  validate_re($ensure, [ '^present', '^absent' ], 'Must be present or absent')
-  validate_email_address($user_email)
-  validate_string($user_name)
-  validate_bool($color_ui)
-  validate_re($push_default, [ '^simple', '^matching' ], 'Push default can be set to simple or matching')
-
-  $home = $name ? {
+  Enum[present, absent]
+          $ensure       = present,
+  String  $user_email   = 'you@yourdomain.com',
+  String  $user_name    = 'Name',
+  String  $user_home    = $name ? {
     'root'  => '/root',
     default => "/home/${name}"
-  }
+  },
+  Boolean $color_ui     = true,
+  Enum[simple, matching, upstream]
+          $push_default = simple
+) {
 
   $file_ensure = $ensure ? {
-    'present' => file,
-    default   => $ensure,
+    present => file,
+    default => $ensure,
   }
 
-  file { "${home}/.gitconfig":
+  file { "${user_home}/.gitconfig":
     ensure  => $file_ensure,
-    path    => "${home}/.gitconfig",
+    path    => "${user_home}/.gitconfig",
     owner   => $name,
     group   => $name,
     mode    => '0664',
