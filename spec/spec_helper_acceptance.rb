@@ -42,6 +42,8 @@ RSpec.configure do |c|
   c.before :suite do
     # Install module and dependencies
     hosts.each do |host|
+      apply_manifest_on(host, 'package { "python-software-properties": }')
+      apply_manifest_on(host, 'package { "software-properties-common": }')
       copy_module_to(host, :source => proj_root, :module_name => 'git')
       shell("/bin/touch #{default['puppetpath']}/hiera.yaml")
       on host, puppet('module install puppetlabs-stdlib --version 4.14.0')
