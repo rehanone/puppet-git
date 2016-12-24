@@ -17,7 +17,7 @@ describe 'git class:', :unless => UNSUPPORTED_PLATFORMS.include?(fact('osfamily'
 
   context 'package_ensure => present:' do
     it 'runs successfully' do
-      pp = "class { 'ntp': package_ensure => present }"
+      pp = "class { 'git': package_ensure => present }"
 
       apply_manifest(pp, :catch_failures => true) do |r|
         expect(r.stderr).not_to match(/error/i)
