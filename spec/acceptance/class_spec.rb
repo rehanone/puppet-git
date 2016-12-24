@@ -1,17 +1,37 @@
 require 'spec_helper_acceptance'
 
-describe 'git class' do
+describe 'git class:', :unless => UNSUPPORTED_PLATFORMS.include?(fact('osfamily')) do
+  it 'should run successfully' do
+    pp = "class { 'git': }"
 
-  context 'default parameters' do
-    # Using puppet_apply as a helper
-    it 'should work with no errors' do
-      pp = <<-EOS
-      class { 'git': }
-      EOS
+    # Apply twice to ensure no errors the second time.
+    apply_manifest(pp, :catch_failures => true) do |r|
+      expect(r.stderr).not_to match(/error/i)
+    end
+    apply_manifest(pp, :catch_failures => true) do |r|
+      expect(r.stderr).not_to eq(/error/i)
 
-      # Run it twice and test for idempotency
-      apply_manifest(pp, :catch_failures => true)
-      apply_manifest(pp, :catch_changes => true)
+      expect(r.exit_code).to be_zero
+    end
+  end
+
+  context 'package_ensure => present:' do
+    it 'runs successfully' do
+      pp = "class { 'ntp': package_ensure => present }"
+
+      apply_manifest(pp, :catch_failures => true) do |r|
+        expect(r.stderr).not_to match(/error/i)
+      end
+    end
+  end
+
+  context 'package_ensure => absent:' do
+    it 'runs successfully' do
+      pp = "class { 'git': package_ensure => absent }"
+
+      apply_manifest(pp, :catch_failures => true) do |r|
+        expect(r.stderr).not_to match(/error/i)
+      end
     end
   end
 end
