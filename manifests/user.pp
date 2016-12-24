@@ -17,7 +17,6 @@ define git::user (
     default => $ensure,
   }
 
-  notify {"${user_home}/.gitconfig":}
   file { "${user_home}/.gitconfig":
     ensure  => $file_ensure,
     path    => "${user_home}/.gitconfig",
