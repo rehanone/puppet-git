@@ -1,4 +1,5 @@
 require 'spec_helper'
+
 describe 'git::install', :type => :class do
   let :pre_condition do
       'class { "git": }'
@@ -9,5 +10,8 @@ describe 'git::install', :type => :class do
   } }
 
 
-  it { is_expected.to contain_package('git') }
+  it { is_expected.to contain_package('git').with({
+        'alias' => 'git',
+     })
+  }
 end
