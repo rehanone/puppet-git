@@ -1,3 +1,11 @@
+## 0.2.0 (December 25, 2016)
+
+Features:
+
+  - Introduce proper Puppet 4 types for parameters.
+  - Remove legacy validate statements of puppet-stdlib module.
+  - Increased unit and acceptance tests coverage.
+
 ## 0.1.3 (May 23, 2016)
 
 Bugfixes:
