@@ -3,9 +3,9 @@ define git::user (
           $ensure       = present,
   String  $user_email   = 'you@yourdomain.com',
   String  $user_name    = 'Name',
-  String  $user_home    = $name ? {
+  String  $user_home    = $title ? {
     'root'  => '/root',
-    default => "/home/${name}"
+    default => "/home/${title}"
   },
   Boolean $color_ui     = true,
   Enum[simple, matching, upstream]
@@ -17,13 +17,14 @@ define git::user (
     default => $ensure,
   }
 
+  notify {"${user_home}/.gitconfig":}
   file { "${user_home}/.gitconfig":
     ensure  => $file_ensure,
     path    => "${user_home}/.gitconfig",
-    owner   => $name,
-    group   => $name,
+    owner   => $title,
+    group   => $title,
     mode    => '0664',
     content => template("${module_name}/gitconfig.erb"),
-    require => User[$name],
+    require => User[$title],
   }
 }
