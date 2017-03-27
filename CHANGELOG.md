@@ -1,3 +1,10 @@
+## 0.3.0 (March 27, 2017)
+
+Features:
+
+  - Added `package_manage` parameter to allow disabling management of package resource.
+  - Increased unit and acceptance tests coverage.
+
 ## 0.2.0 (December 25, 2016)
 
 Features:
