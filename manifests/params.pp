@@ -7,6 +7,7 @@ class git::params {
     default  => '',
   }
   $sources_ensure  = present
+  $package_manage  = true
   $package_ensure  = latest
   $package_name    = 'git'
 }
