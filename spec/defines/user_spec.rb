@@ -28,31 +28,42 @@ testcases = {
 }
 
 describe 'git::user' do
+  let(:facts) {{ :is_virtual => 'false' }}
 
-  testcases.each do |profile, values|
-
-      let(:pre_condition) { [
-        'contain git',
-        'user{"user_default": }',
-        'user{"root": }',
-      ] }
-
-      let(:facts) { {
-        :os => { 'name' => 'Ubuntu' }
-      } }
-
-    context "testing #{profile}" do
-      let(:title) { profile }
-      let(:params) { values[:params] }
-
-      it do
-#        should contain_file("#{values[:expect][:user_home]}/.gitignore")
-#          .with_ensure('file')
-#          .with_path("#{values[:expect][:user_home]}/.gitignore")
-#          .with_owner("#{title}")
-#          .with_group("#{title}")
-#          .with_mode('0644')
+  on_supported_os.select { |_, f| f[:os]['family'] != 'Solaris' }.each do |os, f|
+    context "on #{os}" do
+      let(:facts) do
+        f.merge(super())
       end
+
+
+      testcases.each do |profile, values|
+
+          let(:pre_condition) { [
+            'contain git',
+            'user{"user_default": }',
+            'user{"root": }',
+          ] }
+
+          let(:facts) { {
+            :os => { 'name' => 'Ubuntu' }
+          } }
+
+        context "testing #{profile}" do
+          let(:title) { profile }
+          let(:params) { values[:params] }
+
+          it do
+    #        should contain_file("#{values[:expect][:user_home]}/.gitignore")
+    #          .with_ensure('file')
+    #          .with_path("#{values[:expect][:user_home]}/.gitignore")
+    #          .with_owner("#{title}")
+    #          .with_group("#{title}")
+    #          .with_mode('0644')
+          end
+        end
+      end #testcases.each
+
     end
-  end #testcases.each
-end #describe
+  end
+end
