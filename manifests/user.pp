@@ -23,7 +23,14 @@ define git::user (
     owner   => $title,
     group   => $title,
     mode    => '0664',
-    content => epp("${module_name}/gitconfig.epp"),
+    content => epp("${module_name}/gitconfig.epp",
+      {
+        'user_email'   => $user_email,
+        'user_name'    => $user_name,
+        'color_ui'     => $color_ui,
+        'push_default' => $push_default,
+      }
+    ),
     require => User[$title],
   }
 }
