@@ -10,9 +10,9 @@ class git (
   Hash[String, Hash[String, String]]
           $users = hiera_hash('git::users', {}),
 ) inherits git::params {
-  anchor { "${module_name}::begin": } ->
-    class { "${module_name}::sources": } ->
-    class { "${module_name}::install": } ->
-    class { "${module_name}::config": } ->
-  anchor { "${module_name}::end": }
+  anchor { "${module_name}::begin": }
+  -> class { "${module_name}::sources": }
+  -> class { "${module_name}::install": }
+  -> class { "${module_name}::config": }
+  -> anchor { "${module_name}::end": }
 }
