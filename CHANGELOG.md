@@ -1,3 +1,13 @@
+## 0.4.0 (March 27, 2017)
+
+Features:
+
+  - Convert templates from .erb to .epp.
+
+Bugfixes:
+
+  - Fix the style issues in chaining arrows.
+
 ## 0.3.0 (March 27, 2017)
 
 Features:
@@ -23,7 +33,7 @@ Bugfixes:
 
 Features:
 
-  - Update supported os metrix.
+  - Update supported os matrix.
 
 Bugfixes:
 
