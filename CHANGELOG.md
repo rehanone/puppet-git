@@ -3,6 +3,7 @@
 Features:
 
   - Convert templates from .erb to .epp.
+  - Updated puppetlabs-apt dependency version upper limit.
 
 Bugfixes:
 
