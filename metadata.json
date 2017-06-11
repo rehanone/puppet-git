@@ -55,7 +55,9 @@
         "12.04",
         "14.04",
         "15.10",
-        "16.04"
+        "16.04",
+        "16.10",
+        "17.04"
       ]
     },
     {
@@ -82,7 +84,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.0.0 < 5.0.0"
+      "version_requirement": ">= 4.7.0 < 5.0.0"
     }
   ],
   "dependencies": [
