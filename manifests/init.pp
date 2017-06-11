@@ -8,7 +8,7 @@ class git (
   String  $package_ensure = $git::params::package_ensure,
   String  $package_name   = $git::params::package_name,
   Hash[String, Hash[String, String]]
-          $users = hiera_hash('git::users', {}),
+          $users = lookup('git::users', Hash, 'hash', {}),
 ) inherits git::params {
   anchor { "${module_name}::begin": }
   -> class { "${module_name}::sources": }
