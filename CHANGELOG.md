@@ -1,3 +1,10 @@
+## 0.6.0 (February 17, 2018)
+
+Improvements:
+
+  - Added support for Puppet 5.
+  - Updated OS support matrix.
+
 ## 0.5.0 (June 11, 2017)
 
 Improvements:
