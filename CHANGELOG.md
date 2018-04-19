@@ -1,3 +1,9 @@
+## 1.1.0 (April 19, 2018)
+
+Improvements:
+
+  - Updated module data to `hiera 5`.
+
 ## 1.0.0 (April 19, 2018)
 
 Improvements:
