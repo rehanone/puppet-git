@@ -1,3 +1,5 @@
+# git::user
+#
 define git::user (
   Enum[present, absent]
           $ensure       = present,
@@ -22,7 +24,7 @@ define git::user (
     path    => "${user_home}/.gitconfig",
     owner   => $title,
     group   => $title,
-    mode    => '0664',
+    mode    => '0644',
     content => epp("${module_name}/gitconfig.epp",
       {
         'user_email'   => $user_email,
