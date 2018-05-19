@@ -36,14 +36,14 @@ Currently, this feature is supported for the following OSes:
 ## Setup
 In order to install `rehan-git`, run the following command:
 ```bash
-$ sudo puppet module install rehan-git
+$ puppet module install rehan-git
 ```
 The module does expect all the data to be provided through 'Hiera'. See [Usage](#usage) for examples on how to configure it.
 
 #### Requirements
 This module is designed to be as clean and complient with latest puppet code guidelines. It works with:
 
-  - `puppet >=4.0.0`
+  - `puppet >=4.10.0`
 
 ## Usage
 
@@ -81,7 +81,6 @@ All of this data can be provided through `Hiera`.
 
 **YAML**
 ```yaml
----
 git::sources_manage: true
 git::sources_repo: 'ppa:git-core/ppa'
 git::sources_ensure: present
@@ -130,5 +129,5 @@ git::user{'alice':
 
 ## Development
 
-You can submit pull requests and create issues through the official page of this module: https://github.com/rehan/puppet-git. 
+You can submit pull requests and create issues through the official page of this module on [GitHub](https://github.com/rehan/puppet-git).
 Please do report any bug and suggest new features/improvements.
