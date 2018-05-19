@@ -1,6 +1,6 @@
 # rehan-git
 
-[![Build Status](https://travis-ci.org/rehanone/puppet-git.svg?branch=master)](https://travis-ci.org/rehanone/puppet-git)
+[![Puppet Forge](http://img.shields.io/puppetforge/v/rehan/git.svg)](https://forge.puppetlabs.com/rehan/git) [![Build Status](https://travis-ci.org/rehanone/puppet-git.svg?branch=master)](https://travis-ci.org/rehanone/puppet-git)
 
 #### Table of Contents
 1. [Overview](#overview)
