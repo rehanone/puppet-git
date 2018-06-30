@@ -1,3 +1,11 @@
+## 1.1.2 (June 30, 2018)
+
+Improvements:
+
+- Updated `pdk` templates.
+- Added tests for Ubuntu 18.04 release.
+- Fixed minor documentation issues.
+
 ## 1.1.1 (May 6, 2018)
 
 Improvements:
