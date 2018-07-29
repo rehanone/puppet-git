@@ -1,3 +1,10 @@
+## 1.1.3 (July 29, 2018)
+
+Improvements:
+
+- Updated `pdk` templates.
+- Updated module dependency versions.
+
 ## 1.1.2 (June 30, 2018)
 
 Improvements:
