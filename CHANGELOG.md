@@ -1,3 +1,12 @@
+## 1.1.4 (August 31, 2018)
+
+Improvements:
+
+- Updated `pdk` templates.
+- Added tests for Debian 9 release.
+- Updated `puppetlabs-stdlib` dependency version.
+- Fixed minor documentation issues.
+
 ## 1.1.3 (July 29, 2018)
 
 Improvements:
