@@ -124,8 +124,8 @@ git::user{'alice':
 * [stdlib][1]
 * [apt][2]
 
-[1]:https://github.com/puppetlabs/puppetlabs-stdlib
-[2]:https://github.com/puppetlabs/puppetlabs-apt
+[1]:https://forge.puppet.com/puppetlabs/stdlib
+[2]:https://forge.puppet.com/puppetlabs/apt
 
 ## Development
 
