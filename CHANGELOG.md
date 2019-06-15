@@ -1,3 +1,10 @@
+## 1.2.2 (June 15, 2019)
+
+Improvements:
+
+- Updated minimum `puppet` version to 5.5.10.
+- Updated os support matrix.
+
 ## 1.2.1 (January 03, 2019)
 
 Improvements:
