@@ -34,7 +34,7 @@ describe 'git class:', unless: UNSUPPORTED_PLATFORMS.include?(fact('osfamily')) 
           users => {
             'root' => {
               user_email => 'a@a.co',
-              user_name => 'Rehan Mahmood',
+              user_name => "Rehan Mahmood",
             }
           }
         }
