@@ -7,7 +7,6 @@ class git::install inherits git {
   if $git::package_manage {
     package { $git::package_name:
       ensure => $git::package_ensure,
-      alias  => 'git',
     }
   }
 }
