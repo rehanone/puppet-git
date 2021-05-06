@@ -1,3 +1,9 @@
+## 1.5.1 (May 6, 2021)
+
+**Improvements:**
+
+- Updated links to travis-ci.
+
 ## 1.5.0 (May 4, 2021)
 
 **Features:**
