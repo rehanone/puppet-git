@@ -32,6 +32,7 @@ appveyor.yml:
     - set: docker/debian-9
     - set: docker/debian-8
     - set: docker/centos-8
+    - set: docker/rocky-8
     - set: docker/centos-7
     - set: docker/opensuse-15
   docker_defaults:
