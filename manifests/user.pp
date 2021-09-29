@@ -1,20 +1,28 @@
 # git::user
 #
 define git::user (
-  Enum[present, absent]   $ensure                = present,
-  String  $user_email                            = 'you@yourdomain.com',
-  String  $user_name                             = 'Name',
-  String  $user_home                             = $title ? {
+  Enum[present, absent]   $ensure = present,
+  String  $user_email             = 'you@yourdomain.com',
+  String  $user_name              = 'Name',
+  String  $user_home              = $title ? {
     'root'  => '/root',
     default => "/home/${title}"
   },
-  Boolean $color_ui                              = true,
-  Enum[simple, matching, upstream] $push_default = simple
+  Hash[
+    String,
+    Hash[String, Variant]
+  ] $gitconfig                    = {},
 ) {
 
   $file_ensure = $ensure ? {
     'present' => file,
     default   => $ensure,
+  }
+
+  if $gitconfig.empty {
+    $config = lookup('git::default_gitconfig', Hash, 'hash', {})
+  } else {
+    $config = $gitconfig
   }
 
   file { "${user_home}/.gitconfig":
@@ -25,10 +33,9 @@ define git::user (
     mode    => '0644',
     content => epp("${module_name}/gitconfig.epp",
       {
-        'user_email'   => $user_email,
-        'user_name'    => $user_name,
-        'color_ui'     => $color_ui,
-        'push_default' => $push_default,
+        'user_email' => $user_email,
+        'user_name'  => $user_name,
+        'gitconfig'  => $config,
       }
     ),
     require => User[$title],
