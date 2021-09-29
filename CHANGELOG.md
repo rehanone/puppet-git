@@ -1,3 +1,11 @@
+## 1.5.2 (September 29, 2021)
+
+**Improvements:**
+
+- Updated `pdk` templates.
+- Updated os support matrix.
+- Added support for Rockylinux.
+
 ## 1.5.1 (May 6, 2021)
 
 **Improvements:**
