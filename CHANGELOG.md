@@ -1,3 +1,14 @@
+## 1.6.0 (September 29, 2021)
+
+**Improvements:**
+
+- Introduce a new `gitconfig` option for controlling the per user config files.
+
+**Removed:**
+
+- Removed `color_ui` option from the user config.
+- Removed `push_default` option fror the user config.
+
 ## 1.5.2 (September 29, 2021)
 
 **Improvements:**
