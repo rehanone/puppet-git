@@ -7,7 +7,7 @@ class git (
   Boolean $package_manage,
   String  $package_ensure,
   String  $package_name,
-  Hash[String, Hash[String, String]]     $users = lookup('git::users', Hash, 'hash', {}),
+  Hash    $users = lookup('git::users', Hash, 'hash', {}),
 ) {
   anchor { "${module_name}::begin": }
   -> class { "${module_name}::sources": }

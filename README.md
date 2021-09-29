@@ -27,7 +27,7 @@ Currently, this feature is supported for the following OSes:
 
 #### Implemented Features:
 * Installs git from packages
-* Optionally installs package from upstream git sources.
+* Optionally installs package from upstream git sources (only on Ubuntu using ppa).
 * Initialising user accounts with git configurations.
 
 #### Features not yet updated
@@ -91,21 +91,44 @@ git::users:
   bob:
     user_email: 'bob@test.com'
     user_name: 'Bob Builder'
+    gitconfig:
+      color:
+         ui: true
+      push:
+         default: simple
+      pull:
+         ff: only
+      fetch:
+         prune: true
 ```
 
 ### Resources
 
 #### `git::user`
 
-This basically sets the users name and email by configuring the git global variables as that user, and should allow them 
-to use git without warnings about these values being unset. The user name should be a valid user account that has been 
-previously defined in Puppet.
+This defined type is used to set the per user .gitconfig file. It includes the users' name and email.
+The username should be a valid user account that has been managed by Puppet.
+The gitconfig sections is a hash of values that go in the users' .gitconfig file. See [git-scm](https://git-scm.com/docs/git-config) for details.
 
 Usage:
 ```puppet
 git::user{'alice':
  user_name  => 'Alice Alic',
  user_email => 'alice@xyz.com',
+ gitconfig => {
+    'color' => {
+       ui => true,
+    },
+    'push' => {
+       default => 'simple',
+    },
+    'pull' => {
+       ff => 'only',
+    },
+    'fetch' => {
+       prune => true,
+    },
+  }
 }
 ```
 
@@ -114,8 +137,7 @@ git::user{'alice':
 * *ensure* could be set to `present` or `absent`, the default is `present`.
 * *user_name* sets the user's name to the specified string.
 * *user_email* sets the user's email address to the specified string.
-* *color_ui* controls the ui color option for git, the possible values are `true` and `false`, the default is `true`.
-* *push_default* sets the default push behaviour for git, the possible values are `simple` and `matching`, the default is `simple`.
+* *gitconfig* A hash of values that go in .gitconfig file of the user., the default is as shown in the example above.
 
 ## Dependencies
 

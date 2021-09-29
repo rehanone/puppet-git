@@ -5,3 +5,13 @@ git::sources_repo: ''
 git::package_manage: true
 git::package_ensure: latest
 git::package_name: 'git'
+
+git::default_gitconfig:
+  color:
+    ui: true
+  push:
+    default: simple
+  pull:
+    ff: only
+  fetch:
+    prune: true
