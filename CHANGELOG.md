@@ -1,3 +1,12 @@
+## 2.0.0 (November 18, 2021)
+
+**Improvements:**
+
+- Updated os support matrix.
+- Updated `pdk` templates.
+- Updated minimum `puppet` version to `6.0.0`.
+- Updated dependency versions.
+
 ## 1.6.0 (September 29, 2021)
 
 **Improvements:**
