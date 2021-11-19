@@ -38,9 +38,6 @@
       "operatingsystem": "OracleLinux"
     },
     {
-      "operatingsystem": "RedHat"
-    },
-    {
       "operatingsystem": "Scientific"
     },
     {
@@ -95,7 +92,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 6.0.6 < 8.0.0"
+      "version_requirement": ">= 6.0.0 < 8.0.0"
     }
   ],
   "tags": [
