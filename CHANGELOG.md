@@ -1,122 +1,129 @@
+## 2.0.1 (November 19, 2021)
+
+**Bugfixes:**
+
+  - Fixed os support matrix.
+  - Fixed minimum supported `puppet` version.
+
 ## 2.0.0 (November 18, 2021)
 
 **Improvements:**
 
-- Updated os support matrix.
-- Updated `pdk` templates.
-- Updated minimum `puppet` version to `6.0.0`.
-- Updated dependency versions.
+  - Updated os support matrix.
+  - Updated `pdk` templates.
+  - Updated minimum `puppet` version to `6.0.0`.
+  - Updated dependency versions.
 
 ## 1.6.0 (September 29, 2021)
 
 **Improvements:**
 
-- Introduce a new `gitconfig` option for controlling the per user config files.
+  - Introduce a new `gitconfig` option for controlling the per user config files.
 
 **Removed:**
 
-- Removed `color_ui` option from the user config.
-- Removed `push_default` option fror the user config.
+  - Removed `color_ui` option from the user config.
+  - Removed `push_default` option fror the user config.
 
 ## 1.5.2 (September 29, 2021)
 
 **Improvements:**
 
-- Updated `pdk` templates.
-- Updated os support matrix.
-- Added support for Rockylinux.
+  - Updated `pdk` templates.
+  - Updated os support matrix.
+  - Added support for Rockylinux.
 
 ## 1.5.1 (May 6, 2021)
 
 **Improvements:**
 
-- Updated links to travis-ci.
+  - Updated links to travis-ci.
 
 ## 1.5.0 (May 4, 2021)
 
 **Features:**
 
-- Added support for openSUSE Leap.
+  - Added support for openSUSE Leap.
 
 **Improvements:**
 
-- Updated `pdk` templates.
-- Updated os support matrix.
-- Added system tests for openSuse Leap 15.
+  - Updated `pdk` templates.
+  - Updated os support matrix.
+  - Added system tests for openSuse Leap 15.
 
 ## 1.4.1 (April 29, 2020)
 
 **Improvements:**
 
-- Added support for Ubuntu 20.04.
-- Updated `pdk` templates.
+  - Added support for Ubuntu 20.04.
+  - Updated `pdk` templates.
 
 ## 1.4.0 (February 13, 2020)
 
 **Improvements:**
 
-- Added support for CentOS 8.
-- Updated os support matrix.
-- Updated `pdk` templates.
+  - Added support for CentOS 8.
+  - Updated os support matrix.
+  - Updated `pdk` templates.
 
 ## 1.3.0 (August 25, 2019)
 
 **Improvements:**
 
-- Added support for Debian 10.
-- Updated os support matrix.
-- Updated `pdk` templates.
+  - Added support for Debian 10.
+  - Updated os support matrix.
+  - Updated `pdk` templates.
 
 ## 1.2.2 (June 15, 2019)
 
 **Improvements:**
 
-- Updated minimum `puppet` version to 5.5.10.
-- Updated os support matrix.
+  - Updated minimum `puppet` version to 5.5.10.
+  - Updated os support matrix.
 
 ## 1.2.1 (January 03, 2019)
 
 **Improvements:**
 
-- Updated `pdk` templates.
+  - Updated `pdk` templates.
 
 ## 1.2.0 (October 14, 2018)
 
 **Improvements:**
 
-- Updated `pdk` templates.
-- Added support for `puppet` version 6.
+  - Updated `pdk` templates.
+  - Added support for `puppet` version 6.
 
 ## 1.1.4 (August 31, 2018)
 
 **Improvements:**
 
-- Updated `pdk` templates.
-- Added tests for Debian 9 release.
-- Updated `puppetlabs-stdlib` dependency version.
-- Fixed minor documentation issues.
+  - Updated `pdk` templates.
+  - Added tests for Debian 9 release.
+  - Updated `puppetlabs-stdlib` dependency version.
+  - Fixed minor documentation issues.
 
 ## 1.1.3 (July 29, 2018)
 
 **Improvements:**
 
-- Updated `pdk` templates.
-- Updated module dependency versions.
+  - Updated `pdk` templates.
+  - Updated module dependency versions.
 
 ## 1.1.2 (June 30, 2018)
 
 **Improvements:**
 
-- Updated `pdk` templates.
-- Added tests for Ubuntu 18.04 release.
-- Fixed minor documentation issues.
+  - Updated `pdk` templates.
+  - Added tests for Ubuntu 18.04 release.
+  - Fixed minor documentation issues.
 
 ## 1.1.1 (May 6, 2018)
 
 **Improvements:**
 
-- Updated `pdk` templates.
-- Updated minimum required `puppet` version to `4.10.0`.
+  - Updated `pdk` templates.
+  - Updated minimum required `puppet` version to `4.10.0`.
 
 ## 1.1.0 (April 19, 2018)
 
