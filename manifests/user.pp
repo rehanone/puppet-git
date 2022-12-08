@@ -13,7 +13,6 @@ define git::user (
     Hash[String, Variant]
   ] $gitconfig                    = {},
 ) {
-
   $file_ensure = $ensure ? {
     'present' => file,
     default   => $ensure,
