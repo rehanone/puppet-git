@@ -1,3 +1,10 @@
+## 2.0.2 (December 8, 2022)
+
+**Improvements:**
+
+- Updated os support matrix.
+- Updated `pdk` templates.
+
 ## 2.0.1 (November 19, 2021)
 
 **Bugfixes:**
