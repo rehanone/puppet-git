@@ -1,3 +1,9 @@
+## 2.0.3 (December 8, 2022)
+
+**Improvements:**
+
+- Updated dependency versions.
+
 ## 2.0.2 (December 8, 2022)
 
 **Improvements:**
