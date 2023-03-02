@@ -117,16 +117,16 @@ git::user{'alice':
  user_email => 'alice@xyz.com',
  gitconfig => {
     'color' => {
-       ui => true,
+       'ui' => true,
     },
     'push' => {
-       default => 'simple',
+       'default' => 'simple',
     },
     'pull' => {
-       ff => 'only',
+       'ff' => 'only',
     },
     'fetch' => {
-       prune => true,
+       'prune' => true,
     },
   }
 }
