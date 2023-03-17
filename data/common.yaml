@@ -15,3 +15,5 @@ git::default_gitconfig:
     ff: only
   fetch:
     prune: true
+  init:
+    defaultBranch: master

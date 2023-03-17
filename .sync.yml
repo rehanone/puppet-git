@@ -5,14 +5,6 @@ common:
 appveyor.yml:
   delete: true
 
-.gitlab-ci.yml:
-  delete: true
-
-.gitpod.Dockerfile:
-  unmanaged: false
-.gitpod.yml:
-  unmanaged: false
-
 .rubocop_todo.yml:
   delete: true
 
@@ -36,10 +28,6 @@ appveyor.yml:
       collection: puppet7
     - set: ubuntu1804-64
       collection: puppet6
-    - set: ubuntu1604-64
-      collection: puppet7
-    - set: ubuntu1604-64
-      collection: puppet6
     - set: debian11-64
       collection: puppet7
     - set: debian11-64
@@ -48,14 +36,10 @@ appveyor.yml:
       collection: puppet7
     - set: debian10-64
       collection: puppet6
-    - set: debian9-64
+    - set: almalinux9-64
       collection: puppet7
-    - set: debian9-64
+    - set: almalinux9-64
       collection: puppet6
-    #    - set: almalinux9-64
-    #      collection: puppet7
-    #    - set: almalinux9-64
-    #      collection: puppet6
   #    - set: rockylinux9-64
   #      collection: puppet7
   #    - set: rockylinux9-64
@@ -93,15 +77,9 @@ Gemfile:
       - gem: 'puppet-lint-version_comparison-check'
     # https://github.com/puppetlabs/pdk-templates#enabling-beaker-system-tests
     ':system_tests':
-      - gem: 'puppet-module-posix-system-r#{minor_version}'
+      - gem: 'puppet-module-posix-system-r2.5'
         version: '~> 1.0'
         platforms: ruby
-      - gem: 'puppet-module-win-system-r#{minor_version}'
-        version: '~> 1.0'
-        platforms:
-          - mswin
-          - mingw
-          - x64_mingw
       - gem: 'beaker'
         version: '~> 4.0'
       - gem: 'beaker-hostgenerator'
@@ -109,7 +87,6 @@ Gemfile:
       - gem: 'beaker-puppet_install_helper'
       - gem: 'beaker-module_install_helper'
       - gem: 'beaker-rspec'
-      - gem: 'beaker-docker'
 
 Rakefile:
   linter_fail_on_warnings: false
